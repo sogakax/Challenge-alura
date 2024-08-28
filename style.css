@@ -1,0 +1,181 @@
+/* se añade un espacio en la parte inferior del header */
+header {
+    padding-bottom: 40px;
+}
+
+.logo {
+    width: 120px;
+}
+
+/* Usamos un flexbox para alinear los elementos en el main y distribuirlos con espacio entre ellos */
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-grow: 1;
+}
+
+/* se define la sección de entrada con flexbox para apilar elementos verticalmente */
+.input-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* creamos el estilo para el área de texto de entrada; sin borde y texto en color azul oscuro */
+#input-texto {
+    background-color: transparent;
+    border: none;
+    color: #0A3871;
+    font-size: 32px;
+    height: 100%;
+    resize: none;
+    padding: 0;
+}
+
+
+#input-texto::placeholder {
+    color: #0A3871;
+}
+
+
+.info {
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+}
+
+/* Estilo para el icono de la información */
+.info-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+
+.info p {
+    font-size: 12px;
+    color: #495057;
+}
+
+/* botones con espacio entre ellos */
+.buttons {
+    display: flex;
+    gap: 24px;
+}
+
+/* Estilo para los botones */
+button {
+    flex: 1;
+    padding: 24px;
+    border-radius: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #0A3871;
+}
+
+/* Botón de encriptar */
+#boton-encriptar {
+    background-color: #0A3871;
+    color: white;
+}
+
+/* Botón de desencriptar  */
+#boton-desencriptar {
+    background-color: #D8DFE8;
+    color: #0A3871;
+}
+
+/* Botón de copiar  */
+#boton-copiar {
+    background-color: #D8DFE8; 
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    padding: 24px; 
+    border-radius: 24px; 
+    font-size: 16px; 
+    cursor: pointer; 
+}
+
+
+.output-section {
+    flex: 1;
+    background-color: white;
+    border-radius: 32px;
+    padding: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#resultado-vacio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Imagen del muñeco con un máximo de ancho de 336px y margen inferior */
+.muneco {
+    width: 100%;
+    max-width: 336px;
+    margin-bottom: 32px;
+}
+
+
+.output-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #343A40;
+}
+
+
+.output-section p {
+    font-size: 16px;
+    color: #495057;
+}
+
+
+#resultado-lleno {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+
+#resultado-del-ejericio {
+    flex-grow: 1;
+    background-color: white;
+    border: none;
+    font-size: 24px;
+    color: #495057;
+    resize: none;
+    margin-bottom: 32px;
+}
+
+/* para ocultar elementos */
+.hidden {
+    display: none !important;
+}
+
+/* Ajustes para dispositivos con pantalla pequeña */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .input-section, .output-section {
+        width: 100%;
+    }
+
+    .muneco {
+        display: none;
+    }
+}
